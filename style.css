@@ -1,27 +1,70 @@
 #topDiv {
+    background-image: url("doodles.png");
     height: 300px;
+    position: relative;
 }
 
 .hourDiv {
-    background: tan;
     height: 100px;
-    margin: 0;
+    margin: 10px auto;
     position: relative;
-    width: 100%;
+    width: 98%;
+}
+
+#currentDT {
+    background: blue;
+    border: 3px grey solid;
+    border-radius: 12px;
+    margin: 30px 15px;
+    position: absolute;
+    text-align: center;
+    height: 80%;
+    width: 20%;
+}
+
+#thisHour {
+    background: yellow;
+    border: 3px grey solid;
+    border-radius: 12px;
+    height: 80%;
+    margin: 30px 15px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: 75%;
+
+}
+
+#bottomDiv {
+    background-image: url("doodles.png");
+    border: 3px grey solid;
+    border-radius: 12px;
+    padding: 5px 0 5px;
+}
+
+.hourDiv {
+    border: 3px grey solid;
+    border-radius: 12px;
 }
 
 #hour{
-    background: pink;
+    background: lightblue;
+    border-right: 3px grey solid;
+    border-radius: 12px;
     height: 100px;
     line-height: 100px;
+    margin: 0;
     text-align: center;
     width: 100px;
 }
 
 #todoInp {
     height: 70px;
+    font-size: 20px;
     margin-left: 105px;
     position: absolute;
+    line-height: 1.5;
     top: 12px;
     left: 5px;
     width: 80%;
