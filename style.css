@@ -1,0 +1,40 @@
+#topDiv {
+    height: 300px;
+}
+
+.hourDiv {
+    background: tan;
+    height: 100px;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+#hour{
+    background: pink;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    width: 100px;
+}
+
+#todoInp {
+    height: 70px;
+    margin-left: 105px;
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 80%;
+}
+
+.saveBtn {
+    height: 100px;
+    margin: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+img {
+    height: 83px;
+}
