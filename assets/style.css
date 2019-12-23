@@ -1,19 +1,15 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #topDiv {
-    background-image: url("doodles.png");
     height: 300px;
     position: relative;
 }
 
-.hourDiv {
-    height: 100px;
-    margin: 10px auto;
-    position: relative;
-    width: 98%;
-}
-
 #currentDT {
-    background: lightblue;
-    border: 3px grey solid;
+    background: white;
+    border: 3px black solid;
     border-radius: 12px;
     margin: 30px 15px;
     position: absolute;
@@ -23,8 +19,8 @@
 }
 
 #thisHour {
-    background: lightblue;
-    border: 3px grey solid;
+    background: white;
+    border: 3px black solid;
     border-radius: 12px;
     height: 80%;
     margin: 30px 15px;
@@ -38,32 +34,38 @@
 
 #bottomDiv {
     background-image: url("doodles.png");
-    border: 3px grey solid;
+    border: 3px black solid;
     border-radius: 12px;
     padding: 5px 0 5px;
+    width: 80%;
+    margin: auto;
 }
 
 .hourDiv {
-    border: 3px grey solid;
+    border: 3px black solid;
     border-bottom: 0;
-    border-radius: 12px;
     margin-bottom: 0;
     margin-top: 0;
+    height: 100px;
+    margin: 0px auto;
+    position: relative;
+    width: 95%;
 }
 
 #hour{
-    background: lightblue;
-    border-right: 3px grey solid;
-    border-radius: 12px;
-    height: 100px;
-    line-height: 100px;
-    margin: 0;
+    background: white;
+    border: 3px black solid;
+    border-top: 20px darkolivegreen solid;
+    border-bottom: 20px darkolivegreen solid;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px 6px;
     text-align: center;
     width: 100px;
 }
 
 #pm5 {
-    border-bottom: 3px grey solid;
+    border-bottom: 3px black solid;
 }
 
 #todoInp {
@@ -73,19 +75,18 @@
     position: absolute;
     line-height: 1.5;
     top: 12px;
-    left: 5px;
-    width: 80%;
+    left: 15px;
+    width: 76%;
 }
 
 .saveBtn {
-    border-radius: 12px;
     height: 100px;
-    margin: 5px;
+    margin: 23px 8px;
     position: absolute;
     top: 0;
     right: 0;
 }
 
 img {
-    height: 83px;
+    height: 50px;
 }
