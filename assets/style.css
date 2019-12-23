@@ -71,11 +71,16 @@ h2 {
     width: 100px;
 }
 
+.currentHour {
+background: burlywood;
+}
+
 #pm5 {
     border-bottom: 3px black solid;
 }
 
 #todoInp {
+    border: 2px black solid;
     height: 70px;
     font-size: 20px;
     margin-left: 105px;
