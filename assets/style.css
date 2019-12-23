@@ -2,6 +2,13 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#today {
+    margin: 10px 0 20px 0;
+}
+
+h2 {
+    margin: 10px 0
+}
 #topDiv {
     height: 300px;
     position: relative;
