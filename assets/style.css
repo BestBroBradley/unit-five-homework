@@ -80,7 +80,7 @@ background: burlywood;
     border-bottom: 3px black solid;
 }
 
-#todoInp {
+.todoInp {
     border: 2px black solid;
     height: 70px;
     font-size: 20px;
