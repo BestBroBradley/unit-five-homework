@@ -7,19 +7,11 @@ function pageOpen() {
 
     var todoArray
     
-    = [
-        "Test0",
-        "Test1",
-        "Test2",
-        "Test3",
-        "Test4",
-        "Test5",
-        "Test6",
-        "Test7",
-        "Test8"
-    ]
-
     todoArray = JSON.parse(localStorage.getItem("todo array")) || [];
+
+    for (var i = 0; i < todoArray.length; i++) {
+        document.getElementsByTagName("textarea")[i].value = todoArray[i]
+    }
 
     if (($(dt.getDay())[0]) === 1) {
         dateP.text(`Monday, ${dt.toLocaleDateString()}`);
@@ -96,6 +88,10 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`9:0${dt.getMinutes()} AM`)
         } else { timeP.text(`9:${dt.getMinutes()} AM`) }
+        if ((todoArray[0]) !== ("")) {
+        $("#thisHour").text(todoArray[0]) } else {
+            $("#thisHour").text("Nothing scheduled for this hour!")
+        }
     }
 
     else if (($(dt.getHours())[0]) === 10) {
@@ -103,6 +99,10 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`10:0${dt.getMinutes()} AM`)
         } else { timeP.text(`10:${dt.getMinutes()} AM`) }
+        if ((todoArray[1]) !== ("")) {
+            $("#thisHour").text(todoArray[1]) } else {
+                $("#thisHour").text("Nothing scheduled for this hour!")
+            }
     }
 
     else if (($(dt.getHours())[0]) === 11) {
@@ -110,6 +110,10 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`11:0${dt.getMinutes()} AM`)
         } else { timeP.text(`11:${dt.getMinutes()} AM`) }
+        if ((todoArray[2]) !== ("")) {
+            $("#thisHour").text(todoArray[2]) } else {
+                $("#thisHour").text("Nothing scheduled for this hour!")
+            }
     }
 
     else if (($(dt.getHours())[0]) === 12) {
@@ -117,6 +121,10 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`12:0${dt.getMinutes()} PM`)
         } else { timeP.text(`12:${dt.getMinutes()} PM`) }
+        if ((todoArray[3]) !== ("")) {
+            $("#thisHour").text(todoArray[3]) } else {
+                $("#thisHour").text("Nothing scheduled for this hour!")
+            }
     }
 
     else if (($(dt.getHours())[0]) === 13) {
@@ -124,6 +132,10 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`1:0${dt.getMinutes()} PM`)
         } else { timeP.text(`1:${dt.getMinutes()} PM`) }
+        if ((todoArray[4]) !== ("")) {
+            $("#thisHour").text(todoArray[4]) } else {
+                $("#thisHour").text("Nothing scheduled for this hour!")
+            }
     }
 
     else if (($(dt.getHours())[0]) === 14) {
@@ -131,6 +143,10 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`2:0${dt.getMinutes()} PM`)
         } else { timeP.text(`2:${dt.getMinutes()} PM`) }
+        if ((todoArray[0]) !== ("")) {
+            $("#thisHour").text(todoArray[0]) } else {
+                $("#thisHour").text("Nothing scheduled for this hour!")
+            }
     }
 
     else if (($(dt.getHours())[0]) === 15) {
@@ -138,6 +154,10 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`3:0${dt.getMinutes()} PM`)
         } else { timeP.text(`3:${dt.getMinutes()} PM`) }
+        if ((todoArray[0]) !== ("")) {
+            $("#thisHour").text(todoArray[0]) } else {
+                $("#thisHour").text("Nothing scheduled for this hour!")
+            }
     }
 
     else if (($(dt.getHours())[0]) === 16) {
@@ -145,6 +165,10 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`4:0${dt.getMinutes()} PM`)
         } else { timeP.text(`4:${dt.getMinutes()} PM`) }
+        if ((todoArray[0]) !== ("")) {
+            $("#thisHour").text(todoArray[0]) } else {
+                $("#thisHour").text("Nothing scheduled for this hour!")
+            }
     }
 
     else if (($(dt.getHours())[0]) === 17) {
@@ -152,6 +176,11 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`5:0${dt.getMinutes()} PM`)
         } else { timeP.text(`5:${dt.getMinutes()} PM`) }
+        $("#thisHour").text(todoArray[0])
+        if ((todoArray[0]) !== ("")) {
+            $("#thisHour").text(todoArray[0]) } else {
+                $("#thisHour").text("Nothing scheduled for this hour!")
+            }
     }
 
     else if (($(dt.getHours())[0]) === 18) {
@@ -194,13 +223,13 @@ function pageOpen() {
         var textbox = (this.parentElement.parentElement.getElementsByTagName("textarea")[0]);
         var newNotes = (textbox).value
         textbox = $(textbox)
-        var i = parseInt(textbox.attr("index"))
-        todoArray[i] = newNotes
+        var index = parseInt(textbox.attr("index"))
+        todoArray[index] = newNotes
         localStorage.setItem("todo array", JSON.stringify(todoArray))
         console.log(localStorage["todo array"])
+        pageOpen();
 
     });
-
 }
 
 pageOpen();
