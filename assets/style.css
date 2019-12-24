@@ -40,6 +40,10 @@ h2 {
 
 }
 
+#thisHour {
+    font-size: 30px;
+}
+
 #bottomDiv {
     background-image: url("doodles.png");
     border: 3px black solid;

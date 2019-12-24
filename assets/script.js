@@ -142,7 +142,6 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`1:0${dt.getMinutes()} PM`)
         } else { timeP.text(`1:${dt.getMinutes()} PM`) }
-        console.log(todoArray[4])
         if ((todoArray[4]) !== ("")) {
             $("#thisHour").text(todoArray[4]) } else {
                 $("#thisHour").text("Nothing scheduled for this hour!")
@@ -154,8 +153,8 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`2:0${dt.getMinutes()} PM`)
         } else { timeP.text(`2:${dt.getMinutes()} PM`) }
-        if ((todoArray[0]) !== ("")) {
-            $("#thisHour").text(todoArray[0]) } else {
+        if ((todoArray[5]) !== ("")) {
+            $("#thisHour").text(todoArray[5]) } else {
                 $("#thisHour").text("Nothing scheduled for this hour!")
             }
     }
@@ -165,8 +164,8 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`3:0${dt.getMinutes()} PM`)
         } else { timeP.text(`3:${dt.getMinutes()} PM`) }
-        if ((todoArray[0]) !== ("")) {
-            $("#thisHour").text(todoArray[0]) } else {
+        if ((todoArray[6]) !== ("")) {
+            $("#thisHour").text(todoArray[6]) } else {
                 $("#thisHour").text("Nothing scheduled for this hour!")
             }
     }
@@ -176,8 +175,8 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`4:0${dt.getMinutes()} PM`)
         } else { timeP.text(`4:${dt.getMinutes()} PM`) }
-        if ((todoArray[0]) !== ("")) {
-            $("#thisHour").text(todoArray[0]) } else {
+        if ((todoArray[7]) !== ("")) {
+            $("#thisHour").text(todoArray[7]) } else {
                 $("#thisHour").text("Nothing scheduled for this hour!")
             }
     }
@@ -187,8 +186,8 @@ function pageOpen() {
         if (dt.getMinutes() < 10) {
             timeP.text(`5:0${dt.getMinutes()} PM`)
         } else { timeP.text(`5:${dt.getMinutes()} PM`) }
-        $("#thisHour").text(todoArray[0])
-        if ((todoArray[0]) !== ("")) {
+        $("#thisHour").text(todoArray[8])
+        if ((todoArray[8]) !== ("")) {
             $("#thisHour").text(todoArray[0]) } else {
                 $("#thisHour").text("Nothing scheduled for this hour!")
             }
