@@ -5,9 +5,19 @@ var dt = new Date();
 
 function pageOpen() {
 
-    var todoArray
+    var todoArray = [
+        "Test0",
+        "Test1",
+        "Test2",
+        "Test3",
+        "Test4",
+        "Test5",
+        "Test6",
+        "Test7",
+        "Test8"
+]
 
-    todoArray = JSON.parse(localStorage.getItem("todo Array")) || [];
+// todoArray = JSON.parse(localStorage.getItem("todo Array")) || [];
 
     if (($(dt.getDay())[0]) === 1) {
         dateP.text(`Monday, ${dt.toLocaleDateString()}`);
@@ -179,8 +189,12 @@ function pageOpen() {
     }
 
     $("button").on("click", function() {
-        var textbox = this.parentElement.parentElement.getElementsByTagName("textarea")[0];
-        textbox.value = ("Testing")
+        var textbox = (this.parentElement.parentElement.getElementsByTagName("textarea")[0]);
+        var newNotes = (textbox).value
+        textbox = $(textbox)
+        var i = parseInt(textbox.attr("index"))
+        todoArray[i] = newNotes
+
       });
 
 }
