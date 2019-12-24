@@ -13,6 +13,16 @@ function pageOpen() {
         document.getElementsByTagName("textarea")[i].value = todoArray[i]
     }
 
+    for (var i = 9; i < ($(dt.getHours())[0]); i++) {
+
+        $(("#" + [i])).addClass("pastHour")
+    } 
+
+    for (var i = 17; i > ($(dt.getHours())[0]); i--) {
+
+        $(("#" + [i])).addClass("futureHour")
+    }
+
     if (($(dt.getDay())[0]) === 1) {
         dateP.text(`Monday, ${dt.toLocaleDateString()}`);
     } else if (($(dt.getDay())[0]) === 2) {
@@ -84,7 +94,7 @@ function pageOpen() {
     }
 
     else if (($(dt.getHours())[0]) === 9) {
-        $("#am9").addClass("currentHour")
+        $("#9").addClass("currentHour")
         if (dt.getMinutes() < 10) {
             timeP.text(`9:0${dt.getMinutes()} AM`)
         } else { timeP.text(`9:${dt.getMinutes()} AM`) }
@@ -95,7 +105,7 @@ function pageOpen() {
     }
 
     else if (($(dt.getHours())[0]) === 10) {
-        $("#am10").addClass("currentHour")
+        $("#10").addClass("currentHour")
         if (dt.getMinutes() < 10) {
             timeP.text(`10:0${dt.getMinutes()} AM`)
         } else { timeP.text(`10:${dt.getMinutes()} AM`) }
@@ -106,7 +116,7 @@ function pageOpen() {
     }
 
     else if (($(dt.getHours())[0]) === 11) {
-        $("#am11").addClass("currentHour")
+        $("#11").addClass("currentHour")
         if (dt.getMinutes() < 10) {
             timeP.text(`11:0${dt.getMinutes()} AM`)
         } else { timeP.text(`11:${dt.getMinutes()} AM`) }
@@ -117,7 +127,7 @@ function pageOpen() {
     }
 
     else if (($(dt.getHours())[0]) === 12) {
-        $("#pm12").addClass("currentHour")
+        $("#12").addClass("currentHour")
         if (dt.getMinutes() < 10) {
             timeP.text(`12:0${dt.getMinutes()} PM`)
         } else { timeP.text(`12:${dt.getMinutes()} PM`) }
@@ -128,10 +138,11 @@ function pageOpen() {
     }
 
     else if (($(dt.getHours())[0]) === 13) {
-        $("#pm1").addClass("currentHour")
+        $("#13").addClass("currentHour")
         if (dt.getMinutes() < 10) {
             timeP.text(`1:0${dt.getMinutes()} PM`)
         } else { timeP.text(`1:${dt.getMinutes()} PM`) }
+        console.log(todoArray[4])
         if ((todoArray[4]) !== ("")) {
             $("#thisHour").text(todoArray[4]) } else {
                 $("#thisHour").text("Nothing scheduled for this hour!")
@@ -139,7 +150,7 @@ function pageOpen() {
     }
 
     else if (($(dt.getHours())[0]) === 14) {
-        $("#pm2").addClass("currentHour")
+        $("#14").addClass("currentHour")
         if (dt.getMinutes() < 10) {
             timeP.text(`2:0${dt.getMinutes()} PM`)
         } else { timeP.text(`2:${dt.getMinutes()} PM`) }
@@ -150,7 +161,7 @@ function pageOpen() {
     }
 
     else if (($(dt.getHours())[0]) === 15) {
-        $("#pm3").addClass("currentHour")
+        $("#15").addClass("currentHour")
         if (dt.getMinutes() < 10) {
             timeP.text(`3:0${dt.getMinutes()} PM`)
         } else { timeP.text(`3:${dt.getMinutes()} PM`) }
@@ -161,7 +172,7 @@ function pageOpen() {
     }
 
     else if (($(dt.getHours())[0]) === 16) {
-        $("#pm4").addClass("currentHour")
+        $("#16").addClass("currentHour")
         if (dt.getMinutes() < 10) {
             timeP.text(`4:0${dt.getMinutes()} PM`)
         } else { timeP.text(`4:${dt.getMinutes()} PM`) }
@@ -172,7 +183,7 @@ function pageOpen() {
     }
 
     else if (($(dt.getHours())[0]) === 17) {
-        $("#pm5").addClass("currentHour")
+        $("#17").addClass("currentHour")
         if (dt.getMinutes() < 10) {
             timeP.text(`5:0${dt.getMinutes()} PM`)
         } else { timeP.text(`5:${dt.getMinutes()} PM`) }

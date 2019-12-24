@@ -57,27 +57,32 @@ h2 {
     height: 100px;
     margin: 0px auto;
     position: relative;
-    width: 95%;
+    width: 96%;
 }
 
 #hour{
     background: white;
     border: 3px black solid;
-    border-top: 20px darkolivegreen solid;
-    border-bottom: 20px darkolivegreen solid;
+    border-top: 20px #5d5050 solid;
+    border-bottom: 20px #5d5050 solid;
     height: 50px;
     line-height: 50px;
     margin: 5px 6px;
     text-align: center;
-    width: 100px;
+    width: 120px;
+}
+
+
+.pastHour {
+    background: darkkhaki;
 }
 
 .currentHour {
-background: burlywood;
+    background: burlywood;
 }
 
-.pastHour {
-background: black;
+.futureHour {
+    background: steelblue;
 }
 
 #pm5 {
@@ -92,7 +97,7 @@ background: black;
     position: absolute;
     line-height: 1.5;
     top: 12px;
-    left: 15px;
+    left: 30px;
     width: 76%;
 }
 
